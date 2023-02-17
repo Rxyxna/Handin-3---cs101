@@ -1,5 +1,11 @@
+import Article.Article;
+import Square.Square;
+
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Collections;
+
 
 
 public class Main {
@@ -22,7 +28,37 @@ public class Main {
         } else {
             System.out.println("The CPR number is not valid.");
         }
-    }
+
+        // C) Create 5 articles, add them into an ArrayList and print them by overriding the .toString() method
+        ArrayList<Article> articles = new ArrayList<>();
+
+        articles.add(new Article("Rajana Bagaeva", "Life as a KEA student"));
+        articles.add(new Article("Vespasian Kaleva", "The Sunken Veil"));
+        articles.add(new Article("Dronning Magrethe", "Harry Potter"));
+        articles.add(new Article("Lille Peter Edderkop", "The Office"));
+        articles.add(new Article("Albert Jensen", "Titanic"));
+
+        System.out.println(articles);
+
+            // D) Sort a list of squares using collections.sort();
+
+            Square squareOne = new Square(2.5, 4.5);
+            Square squareTwo = new Square(5.2, 10);
+            Square squareThree = new Square(7.1, 9);
+
+            ArrayList<Square> newSquares = new ArrayList<>();
+            newSquares.add(squareOne);
+            newSquares.add(squareTwo);
+            newSquares.add(squareThree);
+
+            Collections.sort(newSquares);
+
+            for (Square square : newSquares) {
+                System.out.println("Perimeter:" + square.getPerimeter());
+            }
+
+
+        }
 
     // A) - Write a method that returns a random number between 1-10.
     public static int GetRandomNumber() {
@@ -50,8 +86,7 @@ public class Main {
         } else {
             return false;
         }
-
-
     }
 }
+
 
