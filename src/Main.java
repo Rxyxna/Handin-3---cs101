@@ -1,4 +1,6 @@
 import Article.Article;
+import RedditFrontPage.RedditFrontPage;
+import RedditPost.RedditPost;
 import Square.Square;
 
 import java.util.ArrayList;
@@ -40,27 +42,33 @@ public class Main {
 
         System.out.println(articles);
 
-            // D) Sort a list of squares using collections.sort();
+        // D) Sort a list of squares using collections.sort();
 
-            Square squareOne = new Square(2.5, 4.5);
-            Square squareTwo = new Square(5.2, 10);
-            Square squareThree = new Square(7.1, 9);
+        Square squareOne = new Square(2.5, 4.5);
+        Square squareTwo = new Square(5.2, 10);
+        Square squareThree = new Square(7.1, 9);
 
-            ArrayList<Square> newSquares = new ArrayList<>();
-            newSquares.add(squareOne);
-            newSquares.add(squareTwo);
-            newSquares.add(squareThree);
+        ArrayList<Square> newSquares = new ArrayList<>();
+        newSquares.add(squareOne);
+        newSquares.add(squareTwo);
+        newSquares.add(squareThree);
 
-            Collections.sort(newSquares);
+        Collections.sort(newSquares);
 
-            for (Square square : newSquares) {
-                System.out.println("Perimeter:" + square.getPerimeter());
-            }
-
-
+        for (Square square : newSquares) {
+            System.out.println("Perimeter:" + square.getPerimeter());
         }
 
-    // A) - Write a method that returns a random number between 1-10.
+        // E) New redditpost is initiated
+        RedditPost post = new RedditPost("Rajana Bagaeva", "KEA");
+        post.getDate();
+        post.getDownvotes();
+        post.getUpvotes();
+        System.out.println(post);
+
+    }
+
+        // A) - Write a method that returns a random number between 1-10.
     public static int GetRandomNumber() {
         Random random = new Random();
         int x = random.nextInt(10) + 1;
@@ -86,6 +94,10 @@ public class Main {
         } else {
             return false;
         }
+
+
+
+
     }
 }
 
